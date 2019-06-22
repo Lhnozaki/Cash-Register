@@ -3,18 +3,22 @@
 }
 
 body {
-  background-color: black;
-  font-family: "poppins";
+  background-image: url("/assets/Wallpaper.jpg");
+  //background-position: center;
+  //background-size: auto;
+  background-repeat: no-repeat;
+  font-family: "poppin";
 }
 
 .container {
-  max-width: 60%;
-  margin: 50px auto;
+  max-width: 50%;
+  margin: -20px auto;
   padding: 0px;
-  background-color: white;
-  border: 2px solid lightgray;
-  height: 1000px;
+  background-color: #0d0d0d;
+  border-left: 20px solid white;
+  height: 1200px;
   text-align: center;
+  //border-radius: 40px;
 }
 
 button {
@@ -22,30 +26,52 @@ button {
   height: 70px;
   margin-bottom: 4px;
   font-size: 15px;
-  border-left: 2px solid black;
-  border-bottom: 3px solid grey;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  border-bottom: 1px solid white;
+  font-weight: bold;
+  color: white;
+  background: black
 }
 
 #pay {
-  width: 77%;
+  width: 77.3%;
+  color: aqua;
+}
+
+#pay:hover {
+  background: lightblue;
+  border-left: 10px solid lightcoral;
+  color: white;
 }
 
 button:hover {
-  background-color: black;
-  transition-duration: 0.4s;
+  background-color: lightpink;
+  transition-duration: 0.3s;
   color: white;
   font-weight: bolder;
-  border: 3px 
+  border-left: 10px solid rgb(159, 255, 214);
+}
+
+.specialBtn {
+  color: chartreuse;
+}
+
+.specialBtn:hover {
+  background-color: rgb(167, 238, 201);
+  border-left: 10px solid rgb(113, 102, 230);
 }
 
 #logo {
-  width: 65%;
+  width: 80%;
 }
 
 #pay span {
   display: inline-block;
   position: relative;
-  transition: 0.5s;
+  transition: 0.3s;
+  font-size: 20px;
 }
 
 #pay span:after {
@@ -54,7 +80,7 @@ button:hover {
   opacity: 0;
   top: 0;
   right: -20px;
-  transition: 0.2s;
+  //transition: 0.2s;
 }
 
 #pay:hover span {
@@ -66,6 +92,59 @@ button:hover {
   right: 0;
 }
 
+.screen {
+  width: 77.3%;
+  height: 30px;
+  font-size: 40px;
+  padding: 20px;
+  text-align: right;
+}
+
+.slider {
+  width: 280px;
+  height: 290px;
+  display: flex;
+  overflow-x: auto;
+  margin: auto;
+  //-webkit-overflow-scrolling: touch;
+  //scroll-snap-type: x mandatory;
+}
+
+.slide {
+  /* width: 100px;
+  flex-shrink: 0;
+  height: 100%;
+  background: white; */
+  padding: 10px;
+}
+
+.shoe {
+  width: 250px;
+  height: 250px;
+  border: 1px solid mediumspringgreen
+}
+
+/*Scroll Bar CSS*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: salmon; 
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: lightgreen; 
+}
 
 
 
