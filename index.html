@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <title>Cash-Register</title>
+</head>
+<body>
+  <div class="container"> <!--Container Div-->
+
+    <div id="header"> <!--Header-->
+      <h3>
+        <img src="data:image/png;base64,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" alt="" id="logo">
+      </h3>
+    </div>
+
+    <div id="box1"> <!--Div 1-->
+
+      <!--Display UI-->
+      <div id="display">
+        <form action="">--- UI Display Box Here ---</form>
+      </div>
+      <br>
+
+      <!--Button UI-->
+      <div class="group1">
+        <button >7</button>
+        <button >8</button>
+        <button >9</button>
+        <button >/</button>
+        <button >Clear</button>
+      </div>
+
+      <div id="group2">
+        <button >4</button>
+        <button >5</button>
+        <button >6</button>
+        <button >X</button>
+        <button >Balance</button>
+      </div>
+      
+      <div id="group3">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button>Deposit</button>
+      </div>
+
+      <div id="group4">
+        <button>0</button>
+        <button>00</button>
+        <button>.</button>
+        <button>+</button>
+        <button>Withdraw</button>
+      </div>
+
+      <div id="group5">
+        <button id="pay"><span>Pay </span></button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="/js/calculator.js"></script>
+  <script src="/js/cash_register.js"></script>
+</body>
+</html>

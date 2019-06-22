@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: "poppins";
+}
+
+.container {
+  max-width: 60%;
+  margin: 50px auto;
+  padding: 0px;
+  background-color: white;
+  border: 2px solid lightgray;
+  height: 1000px;
+  text-align: center;
+}
+
+button {
+  width: 15%;
+  height: 70px;
+  margin-bottom: 4px;
+  font-size: 15px;
+  border-left: 2px solid black;
+  border-bottom: 3px solid grey;
+}
+
+#pay {
+  width: 77%;
+}
+
+button:hover {
+  background-color: black;
+  transition-duration: 0.4s;
+  color: white;
+  font-weight: bolder;
+  border: 3px 
+}
+
+#logo {
+  width: 65%;
+}
+
+#pay span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#pay span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.2s;
+}
+
+#pay:hover span {
+  padding-right: 25px;
+}
+
+#pay:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+
+
+
