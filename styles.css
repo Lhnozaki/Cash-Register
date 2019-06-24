@@ -4,8 +4,7 @@
 
 body {
   background-image: url("/assets/Wallpaper.jpg");
-  //background-position: center;
-  //background-size: auto;
+  background-position: center;
   background-repeat: no-repeat;
   font-family: "poppin";
 }
@@ -16,12 +15,12 @@ body {
   padding: 0px;
   background-color: #0d0d0d;
   border-left: 20px solid white;
-  height: 1200px;
+  border-right: 20px solid white;
+  height: 1189px;
   text-align: center;
-  //border-radius: 40px;
 }
 
-button {
+button{
   width: 15%;
   height: 70px;
   margin-bottom: 4px;
@@ -33,6 +32,15 @@ button {
   font-weight: bold;
   color: white;
   background: black
+}
+
+.EQ {
+  color: orange;
+}
+
+.EQ:hover {
+  border-left: 10px solid yellow;
+  background: orange;
 }
 
 #pay {
@@ -64,7 +72,23 @@ button:hover {
 }
 
 #logo {
-  width: 80%;
+  width: 90%;
+}
+
+.line {
+  width: 400px;
+  height: 10px;
+  background: white;
+  margin: auto;
+  border-radius: 100px;
+}
+
+#line1 {
+  background: lightcoral;
+}
+
+#line2 {
+  background: rgb(159, 255, 214);
 }
 
 #pay span {
@@ -80,7 +104,7 @@ button:hover {
   opacity: 0;
   top: 0;
   right: -20px;
-  //transition: 0.2s;
+  /* transition: 0.2s; */
 }
 
 #pay:hover span {
@@ -98,29 +122,49 @@ button:hover {
   font-size: 40px;
   padding: 20px;
   text-align: right;
+  background: black;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  color: white;
+  margin: 0px;
+}
+
+#modal {
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  height: 90%;
+  width: 60%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8)
+}
+
+#close {
+  width: 40px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .slider {
-  width: 280px;
-  height: 290px;
+  width: 500px;
+  height: 500px;
   display: flex;
   overflow-x: auto;
-  margin: auto;
-  //-webkit-overflow-scrolling: touch;
-  //scroll-snap-type: x mandatory;
+  margin: 0px auto;
 }
 
 .slide {
-  /* width: 100px;
-  flex-shrink: 0;
-  height: 100%;
-  background: white; */
-  padding: 10px;
+  padding: 5px;
 }
 
 .shoe {
-  width: 250px;
-  height: 250px;
+  width: 490px;
+  height: 470px;
   border: 1px solid mediumspringgreen
 }
 
@@ -129,22 +173,32 @@ button:hover {
 ::-webkit-scrollbar {
   width: 5px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background: black; 
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: salmon; 
   border-radius: 100px;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: lightgreen; 
 }
+
+select {
+  background: black;
+  color: white;
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  position: relative;
+  -webkit-appearance: none;
+  -webkit-border-radius: 20px;
+  -webkit-text-stroke: center;
+}
+
 
 
 
