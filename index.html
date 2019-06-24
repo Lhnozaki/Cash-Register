@@ -48,12 +48,12 @@
           <option value="">13</option>
         </select>
         <select name="quantity" id="quantity">
-          <option value="">Quantity</option>
-          <option value="">1</option>
-          <option value="">2</option>
-          <option value="">3</option>
-          <option value="">4</option>
-          <option value="">5</option>
+          <option value="0">Quantity</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
         </select>
       </div>
       <br>
@@ -67,40 +67,45 @@
 
       <!--Display UI-->
       <div id="display">
-        <input type="text" class="screen" value="" placeholder="Subtotal" />
-        <input type="text" class="screen" value="" placeholder="Tax" />
-        <input type="text" class="screen" value="" placeholder="Total" />
+        <input type="text" class="screen" value="" placeholder="Balance" id="Balance" disabled/>
+        <input type="text" class="screen" value="" placeholder="Subtotal" id="Subtotal" disabled/>
+        <input type="text" class="screen" value="" placeholder="Payment" id="Payment" disabled/>
+        <input type="text" class="screen" value="" placeholder="Tax" id="Tax" disabled/>
+        <input type="text" class="screen" value="" placeholder="Change" id="Change" disabled/>
+        <input type="text" class="screen" value="" placeholder="Total" id="Total" disabled/>
+        <input type="text" class="screen" value="" placeholder="$0" id="calcInputs" disabled/>
+        <input type="text" class="screen" value="" placeholder="Calculator" id="calcScreen" disabled/>
       </div>
       <br>
 
       <!--Button UI-->
-      <div class="group1">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
+      <div id="group1">
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
         <button class="EQ">/</button>
-        <button class="specialBtn">CL</button>
+        <button class="specialBtn" id="CL">CL</button>
       </div>
 
       <div id="group2">
-        <button >4</button>
-        <button >5</button>
-        <button >6</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
         <button class="EQ">X</button>
-        <button class="specialBtn">BL</button>
+        <button class="specialBtn" id="BL">BL</button>
       </div>
       
       <div id="group3">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
         <button class="EQ">-</button>
         <button class="specialBtn">DP</button>
       </div>
 
       <div id="group4">
-        <button>0</button>
-        <button>00</button>
+        <button class="number">0</button>
+        <button class="number">00</button>
         <button>.</button>
         <button class="EQ">+</button>
         <button class="specialBtn">WD</button>

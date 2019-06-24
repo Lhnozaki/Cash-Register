@@ -4,19 +4,19 @@
 
 body {
   background-image: url("/assets/Wallpaper.jpg");
-  background-position: center;
+  /* background-position: center; */
   background-repeat: no-repeat;
   font-family: "poppin";
 }
 
 .container {
-  max-width: 55%;
+  max-width: 50%;
   margin: -20px auto;
   padding: 0px;
   background-color: #0d0d0d;
   border-left: 20px solid white;
-  border-right: 20px solid white;
-  height: 1189px;
+  /* border-right: 20px solid white; */
+  height: 1200px;
   text-align: center;
 }
 
@@ -136,9 +136,9 @@ button:hover {
 }
 
 .screen {
-  width: 77.3%;
+  width: 45%;
   height: 30px;
-  font-size: 40px;
+  font-size: 38px;
   padding: 20px;
   text-align: right;
   background: black;
@@ -147,7 +147,15 @@ button:hover {
   border-left: 3px solid white;
   border-right: 3px solid white;
   color: white;
-  margin: 0px;
+  margin: -2px;
+}
+
+#calcScreen {
+  width: 90%;
+}
+
+#calcInputs {
+  width: 90%;
 }
 
 #modal {
@@ -167,6 +175,7 @@ button:hover {
   position: absolute;
   top: 0px;
   right: 0px;
+  cursor: pointer;
 }
 
 .slider {
@@ -219,7 +228,7 @@ select {
 }
 
 #og {
-  width: 50px;
+  width: 59px;
   position: absolute;
   right: 0px;
   bottom: 0px;
