@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 50%;
+  max-width: 55%;
   margin: -20px auto;
   padding: 0px;
   background-color: #0d0d0d;
@@ -24,14 +24,31 @@ button{
   width: 15%;
   height: 70px;
   margin-bottom: 4px;
-  font-size: 15px;
+  font-size: 30px;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-top: 1px solid black;
   border-bottom: 1px solid white;
   font-weight: bold;
   color: white;
-  background: black
+  background: black;
+  cursor: pointer;
+}
+
+#addToCartOne {
+  width: 20px;
+}
+
+#cart {
+  width: 91%;
+  height: 45px;
+  border: 0.5px solid lightgray;
+  border-radius: 100px;
+}
+
+#cart:hover {
+  background: black;
+  cursor: cell;
 }
 
 .EQ {
@@ -45,7 +62,7 @@ button{
 
 #pay {
   width: 77.3%;
-  color: aqua;
+  color: rgb(159, 255, 214);
 }
 
 #pay:hover {
@@ -63,7 +80,7 @@ button:hover {
 }
 
 .specialBtn {
-  color: chartreuse;
+  color: #bfff80;
 }
 
 .specialBtn:hover {
@@ -78,17 +95,19 @@ button:hover {
 .line {
   width: 400px;
   height: 10px;
+  max-width: 60%;
   background: white;
   margin: auto;
   border-radius: 100px;
+  position: relative;
 }
 
 #line1 {
-  background: lightcoral;
+  background: rgb(159, 255, 214);
 }
 
 #line2 {
-  background: rgb(159, 255, 214);
+  background: lightcoral;
 }
 
 #pay span {
@@ -165,7 +184,7 @@ button:hover {
 .shoe {
   width: 490px;
   height: 470px;
-  border: 1px solid mediumspringgreen
+  border: 1px solid mediumspringgreen;
 }
 
 /*Scroll Bar CSS*/
@@ -199,6 +218,12 @@ select {
   -webkit-text-stroke: center;
 }
 
+#og {
+  width: 50px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
 
 
 
