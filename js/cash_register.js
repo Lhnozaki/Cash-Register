@@ -10,11 +10,18 @@ let price = 100.00;
 let tax = document.querySelector("#Tax");
 let total = document.querySelector("#Total");
 let startBalance = 300;
+let newBalance = startBalance;
 let blBtn = document.querySelector("#BL");
 let balance = document.querySelector("#Balance");
 let clear = document.querySelector("#CL");
 let calcInputScreen = document.querySelector("#calcInputs");
 let numbers = document.querySelectorAll(".number");
+let decimal = document.querySelector("#decimal");
+let dpBtn = document.querySelector("#DP");
+let wdBtn = document.querySelector("#WD");
+let payAmount = document.querySelector("#pay");
+let payment = document.querySelector("#Payment");
+let change = document.querySelector("#Change");
 
 /// Modal Functions
 testBtn.addEventListener("change", function() {
@@ -65,8 +72,8 @@ cart.addEventListener("click", function() {
 
 /// Balance button
 blBtn.addEventListener("click", function() {
-  balance.value = `$${startBalance}`;
-  if(startBalance > 0){
+  balance.value = `$${newBalance}`;
+  if(newBalance > 0){
     balance.style.color = "aqua";
   } else {
     balance.style.color = "red";
@@ -80,12 +87,94 @@ clear.addEventListener("click", function() {
   total.value = "";
   balance.value = "";
   calcInputScreen.value = "";
+  payment.value = "";
+  change.value = "";
 })
 
-
+/// Number keys to the calc display
 numbers.forEach(function(e) {
   e.addEventListener("click", function() {
-    calcInputScreen.value += this.textContent;
+      calcInputScreen.value += this.textContent;
     })
 })
+
+/// Decimal Key
+decimal.addEventListener("click", function() {
+  if(calcInputScreen.value.includes(".") === false) {
+    calcInputScreen.value += this.textContent;
+  } else {
+    calcInputScreen.value;
+  }
+})
+
+/// Deposit Button
+dpBtn.addEventListener("click", function() {
+  if(calcInputScreen.value === "") {
+    alert("enter deposit amount");
+  } else {
+  newBalance = newBalance + parseFloat(calcInputScreen.value);
+  balance.value = `$${newBalance}`;
+  if(newBalance > 0) {
+    balance.style.color = "aqua";
+  } else {
+    balance.style.color = "red";
+  }
+}
+})
+
+/// Withdraw Button 
+wdBtn.addEventListener("click", function() {
+  if(calcInputScreen.value === "") {
+    alert("enter withdraw amount");
+  } else {
+  newBalance = newBalance - parseFloat(calcInputScreen.value);
+  balance.value = `$${newBalance}`;
+  if(newBalance <= 0) {
+    balance.style.color = "red";
+  } else {
+    balance.style.color = "aqua";
+  }
+}
+})
+
+/// Pay button
+payAmount.addEventListener("click", function() {
+  payment.value = `$${calcInputScreen.value}`;
+  calcInputScreen.value = "";
+  let payVal = parseFloat(payment.value.substr(1));
+  let totVal = parseFloat(total.value.substr(1));
+
+  if(payment.value === "$") {
+    alert("please enter payment amount");
+  }
+
+  if(total.value === "") {
+    alert("Please add item to cart");
+  }
+
+  if(payVal === totVal) {
+    change.value = "$0";
+    newBalance = newBalance + payVal;
+    balance.value = `$${newBalance}`;
+
+  } else if(payVal > totVal) {
+    let posChange = payVal - totVal;
+    change.value = `$${posChange}`;
+      if(newBalance <= posChange) {
+        alert("Not enough funds in balance. Please deposit more money.");
+        balance.value = `($${newBalance})`;
+        balance.style.color = "orange";
+      } else {
+        newBalance = newBalance + payVal;
+        newBalance = newBalance - posChange;
+        balance.value = `$${newBalance}`;
+      }
+
+  } else if(payVal < totVal) {
+    alert("Not enough payment");
+    change.value = `$-${totVal - payVal}`;
+    change.style.color = "red";
+  }
+})
+
 
