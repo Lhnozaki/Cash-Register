@@ -15,6 +15,7 @@ let blBtn = document.querySelector("#BL");
 let balance = document.querySelector("#Balance");
 let clear = document.querySelector("#CL");
 let calcInputScreen = document.querySelector("#calcInputs");
+let calcScreen = document.querySelector("#calcScreen");
 let numbers = document.querySelectorAll(".number");
 let decimal = document.querySelector("#decimal");
 let dpBtn = document.querySelector("#DP");
@@ -22,10 +23,14 @@ let wdBtn = document.querySelector("#WD");
 let payAmount = document.querySelector("#pay");
 let payment = document.querySelector("#Payment");
 let change = document.querySelector("#Change");
+let add = document.querySelector("#add");
+let substract = document.querySelector("#subtract");
+let multiply = document.querySelector("#multiply");
+let divide = document.querySelector("#divide");
+let equals = document.querySelector("#equals");
 
 /// Modal Functions
 testBtn.addEventListener("change", function() {
-  let slider = document.querySelectorAll(".slider")[0];
   if(this.value === "Select-Color") {
     console.log("Please choose a color");
   } else if(this.value == "Green") {
@@ -89,6 +94,7 @@ clear.addEventListener("click", function() {
   calcInputScreen.value = "";
   payment.value = "";
   change.value = "";
+  calcScreen.value = "";
 })
 
 /// Number keys to the calc display
@@ -175,6 +181,27 @@ payAmount.addEventListener("click", function() {
     change.value = `$-${totVal - payVal}`;
     change.style.color = "red";
   }
+})
+
+/// EQ buttons & Calculator functions
+add.addEventListener("click", function() {
+  calculator.addIt();
+})
+
+substract.addEventListener("click", function() {
+  calculator.subtractIt();
+})
+
+multiply.addEventListener("click", function() {
+  calculator.multiplyIt();
+})
+
+divide.addEventListener("click", function() {
+  calculator.divideIt();
+})
+
+equals.addEventListener("click", function() {
+  calculator.solveIt();
 })
 
 

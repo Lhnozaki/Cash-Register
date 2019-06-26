@@ -4,18 +4,19 @@
 
 body {
   background-image: url("/assets/Wallpaper.jpg");
-  /* background-position: center; */
+  background-position: center;
   background-repeat: no-repeat;
   font-family: "poppin";
+  height: 1190px;
 }
 
 .container {
-  max-width: 50%;
+  max-width: 55%;
   margin: -20px auto;
   padding: 0px;
   background-color: #0d0d0d;
-  border-left: 20px solid white;
-  /* border-right: 20px solid white; */
+  border-left: 10px solid white;
+  border-right: 10px solid white;
   height: 1200px;
   text-align: center;
 }
@@ -89,7 +90,7 @@ button:hover {
 }
 
 #logo {
-  width: 90%;
+  width: 80%;
 }
 
 .line {
@@ -152,6 +153,7 @@ button:hover {
 
 #calcScreen {
   width: 90%;
+  color: lightgreen;
 }
 
 #calcInputs {
@@ -228,7 +230,7 @@ select {
 }
 
 #og {
-  width: 59px;
+  width: 50px;
   position: absolute;
   right: 0px;
   bottom: 0px;
