@@ -13,20 +13,24 @@ let calculator = (function() {
      num2 = parseFloat(calcInputScreen.value);
      let sum = num1 + num2;
      calcScreen.value = sum;
+     calcInputScreen.value = sum;
    } else if(operator === "minus") {
     num2 = parseFloat(calcInputScreen.value);
     let diff = num1 - num2;
     calcScreen.value = diff;
+    calcInputScreen.value = diff;
    } else if(operator === "times") {
     num2 = parseFloat(calcInputScreen.value);
     let product = num1 * num2;
     calcScreen.value = product;
+    calcInputScreen.value = product;
   } else if(operator === "divide") {
     num2 = parseFloat(calcInputScreen.value);
     let quot = num1 / num2;
     calcScreen.value = quot;
+    calcInputScreen.value = quot;
     }
-  }
+  } 
 
   let addIt = function() {
     num1 = parseFloat(calcInputScreen.value);
