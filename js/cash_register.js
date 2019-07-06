@@ -15,7 +15,7 @@ let blBtn = document.querySelector("#BL");
 let balance = document.querySelector("#Balance");
 let clear = document.querySelector("#CL");
 let calcInputScreen = document.querySelector("#calcInputs");
-let calcScreen = document.querySelector("#calcScreen");
+// let calcScreen = document.querySelector("#calcScreen");
 let numbers = document.querySelectorAll(".number");
 let decimal = document.querySelector("#decimal");
 let dpBtn = document.querySelector("#DP");
@@ -94,7 +94,7 @@ clear.addEventListener("click", function() {
   calcInputScreen.value = "";
   payment.value = "";
   change.value = "";
-  calcScreen.value = "";
+  // calcScreen.value = "";
 })
 
 /// Number keys to the calc display
